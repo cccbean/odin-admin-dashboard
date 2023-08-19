@@ -91,7 +91,7 @@ a {
 }
 
 .logo svg {
-  width: 32px;
+  width: 48px;
   height: auto;
 }
 
@@ -105,7 +105,88 @@ ul svg {
   height: auto;
 }
 /* SIDEBAR */
+
+/* CONTENT */
 .content {
-  background-color: lightsalmon;
+  background-color: lightgray;
+  padding: 16px;
   grid-area: content;
+  display: grid;
+  gap: 16px;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template-areas: 
+    "project announce"
+    "project trending";
 }
+
+.project-container {
+  /* background-color: lightgreen; */
+  grid-area: project;
+}
+
+.project-cards {
+  background-color: lightcoral;
+  display: grid;
+  gap: 16px;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+.card {
+  background-color: lightblue;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.announce-container {
+  /* background-color: lightgreen; */
+  grid-area: announce;
+}
+
+.announcements {
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  gap: 8px;
+  grid-template: repeat(3, 1fr);
+}
+
+.announcements > div + div {
+  border-top: 1px solid gray;
+}
+
+.trending-container {
+  /* background-color: lightgreen; */
+  grid-area: trending;
+}
+
+.trending {
+  background-color: white;
+  padding: 16px;
+}
+
+.trending ul {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+}
+
+.trending li {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.trending li div {
+  display: grid;
+  gap: 4px;
+}
+
+.trending img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* CONTENT */
