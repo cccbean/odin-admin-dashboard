@@ -48,6 +48,22 @@ table {
 }
 /* MEYER RESET */
 
+/* FORM DEFAULT */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+/* FORM DEFAULT */
+
+:root {
+  --sidebar-color: #4682A9;
+  --white-font: white;
+}
+
+
 a {
   text-decoration: inherit;
   color: inherit;
@@ -62,14 +78,84 @@ a {
     "sidebar content";
 }
 
+/* HEADER */
 .header {
-  background-color: pink;
+  background-color: var(--white-font);
+  padding: 16px 32px;
   grid-area: header;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
 }
+
+.header svg {
+  width: 16px;
+  height: auto;
+}
+
+.search-bar {
+  align-self: center;
+  display: grid;
+  gap: 16px;
+  grid-template: 1fr / min-content 1fr;
+  align-items: center;
+}
+
+.search-bar input {
+  border-radius: 16px;
+}
+
+.profile-icons {
+  justify-self: end;
+  display: grid;
+  gap: 16px;
+  grid-template: 1fr / min-content min-content 1fr;
+  justify-items: end;
+  align-items: center;
+}
+
+.profile-icons img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.greeting-container {
+  justify-self: start;
+  display: grid;
+  gap: 16px;
+  grid-template: 1fr / min-content 1fr;
+  align-items: center;
+}
+
+.greeting-container img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.buttons {
+  justify-self: end;
+  align-self: center;
+  display: grid;
+  gap: 16px;
+  grid-auto-flow: column;
+}
+
+.buttons button {
+  background-color: var(--sidebar-color);
+  color: var(--white-font);
+  border-radius: 16px;
+  padding: 8px 32px;
+}
+/* HEADER */
+
 
 /* SIDEBAR */
 .sidebar {
-  background-color: lightblue;
+  background-color: var(--sidebar-color);
+  color: var(--white-font);
   padding: 16px;
   grid-area: sidebar;
   display: grid;
@@ -108,7 +194,7 @@ ul svg {
 
 /* CONTENT */
 .content {
-  background-color: lightgray;
+  background-color: #DDD8D8;
   padding: 16px;
   grid-area: content;
   display: grid;
@@ -125,14 +211,14 @@ ul svg {
 }
 
 .project-cards {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   display: grid;
   gap: 16px;
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 }
 
 .card {
-  background-color: lightblue;
+  background-color: var(--white-font);
   border-radius: 16px;
   padding: 16px;
 }
@@ -143,7 +229,7 @@ ul svg {
 }
 
 .announcements {
-  background-color: white;
+  background-color: var(--white-font);
   border-radius: 16px;
   padding: 16px;
   display: grid;
@@ -161,7 +247,8 @@ ul svg {
 }
 
 .trending {
-  background-color: white;
+  background-color: var(--white-font);
+  border-radius: 16px;
   padding: 16px;
 }
 
