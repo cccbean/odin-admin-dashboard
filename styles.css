@@ -61,6 +61,7 @@ textarea {
 :root {
   --sidebar-color: #4682A9;
   --white-font: white;
+  --gray-color: #DDD8D8; 
 }
 
 
@@ -84,11 +85,12 @@ a {
   padding: 16px 32px;
   grid-area: header;
   display: grid;
+  gap: 16px;
   grid-template: 1fr 1fr / 1fr 1fr;
 }
 
 .header svg {
-  width: 16px;
+  width: 24px;
   height: auto;
 }
 
@@ -102,6 +104,9 @@ a {
 
 .search-bar input {
   border-radius: 16px;
+  border: none;
+  background-color: var(--gray-color);
+  padding: 8px;
 }
 
 .profile-icons {
@@ -129,8 +134,8 @@ a {
 }
 
 .greeting-container img {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -146,8 +151,10 @@ a {
 .buttons button {
   background-color: var(--sidebar-color);
   color: var(--white-font);
+  border: none;
   border-radius: 16px;
   padding: 8px 32px;
+  cursor: pointer;
 }
 /* HEADER */
 
@@ -194,7 +201,7 @@ ul svg {
 
 /* CONTENT */
 .content {
-  background-color: #DDD8D8;
+  background-color: var(--gray-color);
   padding: 16px;
   grid-area: content;
   display: grid;
@@ -203,6 +210,10 @@ ul svg {
   grid-template-areas: 
     "project announce"
     "project trending";
+}
+
+.content h2 {
+  margin-bottom: 8px;
 }
 
 .project-container {
